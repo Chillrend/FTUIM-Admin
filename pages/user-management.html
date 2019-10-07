@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Keluhan FTUI</title>
+
+    <!-- META SECTION -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <!-- END META SECTION -->
+    <!-- CSS INCLUDE -->
+    <link rel="stylesheet" href="../resources/css/styles.css">
+    <link rel="stylesheet" href="../resources/css/font-import.css">
+    <!-- EOF CSS INCLUDE -->
+</head>
+<body>
+
+<!-- APP WRAPPER -->
+<div class="app">
+
+    <!-- START APP CONTAINER -->
+    <div class="app-container">
+        <!-- START SIDEBAR -->
+        <!--This is a hack script to cover shitty HTML specification that doesn't have include function, please change with php include instead-->
+        <iframe src="includes/sidebar.html"
+                onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+        <!-- END SIDEBAR -->
+
+        <!-- START APP CONTENT -->
+        <div class="app-content app-sidebar-left">
+            <!-- START APP HEADER -->
+            <!--This is a hack script to cover shitty HTML specification that doesn't have include function, please change with php include instead-->
+            <iframe src="includes/header.html"
+                    onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+            <!-- END APP HEADER  -->
+
+            <!-- START PAGE HEADING -->
+            <div class="app-heading app-heading-bordered app-heading-page">
+                <div class="icon icon-lg">
+                    <span class="icon-laptop"></span>
+                </div>
+                <div class="title">
+                    <h1>Surveyor</h1>
+                    <p>Sarana dan Prasarana</p>
+                </div>
+            </div>
+            <div class="app-heading-container app-heading-bordered bottom">
+                <ul class="breadcrumb">
+                    <li><a href="#">E-Keluhan</a></li>
+                    <li class="active">Detail Keluhan</li>
+                </ul>
+            </div>
+            <!-- END PAGE HEADING -->
+
+            <!-- START PAGE CONTAINER -->
+            <div class="container">
+                <div class="block block-condensed">
+                    <div class="app-heading app-heading-small">
+                        <div class="title">
+                            <h5>Management Pengguna</h5>
+                            <p>Lihat list pengguna aplikasi</p>
+                        </div>
+                    </div>
+
+                    <div class="block-content">
+                        <div class="row" style="margin-bottom: 15px;">
+                            <p>
+                                <button type="button" class="btn btn-default" data-toggle="modal"
+                                        data-target="#elevate-user-privilege-modal"><span class="icon-cog"></span> Ubah
+                                    Role User
+                                </button>
+                                <button type="button" class="btn btn-default" id="delete_attempt"><span class="icon-trash"></span> Hapus
+                                    User
+                                </button>
+                                <button type="button" class="btn btn-default"><span class="icon-pencil"></span> Edit
+                                    informasi User
+                                </button>
+                            </p>
+                        </div>
+                        <div class="row">
+                            <table id="datatable" class="table table-bordered datatable-extended">
+                                <thead>
+                                <tr>
+                                    <th>User ID</th>
+                                    <th>ID</th>
+                                    <th>Title</th>
+                                    <th>Body</th>
+                                </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- END PAGE CONTAINER -->
+
+        </div>
+        <!-- END APP CONTENT -->
+
+    </div>
+    <!-- END APP CONTAINER -->
+    <!-- MODAL DEFAULT -->
+    <div class="modal fade" id="elevate-user-privilege-modal" tabindex="-1" role="dialog"
+         aria-labelledby="modal-default-header">
+        <div class="modal-dialog" role="document">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true" class="icon-cross"></span>
+            </button>
+
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-default-header">Ubah role pengguna</h4>
+                </div>
+                <div class="modal-body">
+                        <label>Pilih tugas dan peran pengguna</label>
+                        <select class="bs-select" id="select_role">
+                            <option value="mahasiswa">Mahasiswa (Berhak melaporkan keluhan)</option>
+                            <option value="surveyor">Surveyor</option>
+                            <option value="manager">Manager</option>
+                            <option value="admin">Administrator (Dangerous Role)</option>
+                        </select>
+
+                    <div id="surveyor-category-wrapper">
+                        <label class="margin-top-10">Pilih kategori surveyor</label>
+                        <select class="bs-select" id="surveyor_category">
+                            <option>Sarana dan Prasarana</option>
+                            <option>Gedung/Bangunan</option>
+                            <option>Tenaga Kependidikan / HR</option>
+                            <option>Kebersihan dan Pertamanan</option>
+                            <option>Insiden dan Pelanggaran Tata Tertib</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-link" data-dismiss="modal">Tutup</button>
+                    <button id="change-role-btn" type="button" class="btn btn-default">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END MODAL DEFAULT -->
+</div>
+
+
+<!-- END APP WRAPPER -->
+
+<!-- START SCRIPTS -->
+<script type="text/javascript" src="../resources/js/vendor/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/moment/moment.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/customscrollbar/jquery.mCustomScrollbar.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/bootstrap-select/bootstrap-select.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/select2/select2.full.min.js"></script>
+<script type="text/javascript"
+        src="../resources/js/vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/maskedinput/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/form-validator/jquery.form-validator.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/noty/jquery.noty.packaged.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/datatables/dataTables.bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/knob/jquery.knob.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/jvectormap/jquery-jvectormap.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/jvectormap/jquery-jvectormap-us-aea-en.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/sparkline/jquery.sparkline.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/morris/raphael.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/morris/morris.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/rickshaw/d3.v3.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/rickshaw/rickshaw.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/isotope/isotope.pkgd.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/dropzone/dropzone.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/nestable/jquery.nestable.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/cropper/cropper.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/tableexport/tableExport.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/tableexport/jquery.base64.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/tableexport/html2canvas.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/tableexport/jspdf/libs/sprintf.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/tableexport/jspdf/jspdf.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/tableexport/jspdf/libs/base64.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/bootstrap-daterange/daterangepicker.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/bootstrap-tour/bootstrap-tour.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/fullcalendar/fullcalendar.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/smartwizard/jquery.smartWizard.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript" src="../resources/js/user-man.js"></script>
+
+<script type="text/javascript" src="../resources/js/app.js"></script>
+<script type="text/javascript" src="../resources/js/app_plugins.js"></script>
+<script type="text/javascript" src="../resources/js/app_demo.js"></script>
+
+
+<!-- END SCRIPTS -->
+</body>
+</html>

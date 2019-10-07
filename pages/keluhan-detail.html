@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Keluhan FTUI</title>
+
+    <!-- META SECTION -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <!-- END META SECTION -->
+    <!-- CSS INCLUDE -->
+    <link rel="stylesheet" href="../resources/css/styles.css">
+    <link rel="stylesheet" href="../resources/css/font-import.css">
+    <!-- EOF CSS INCLUDE -->
+</head>
+<body>
+
+<!-- APP WRAPPER -->
+<div class="app">
+
+    <!-- START APP CONTAINER -->
+    <div class="app-container">
+        <!-- START SIDEBAR -->
+        <!--This is a hack script to cover shitty HTML specification that doesn't have include function, please change with php include instead-->
+        <iframe src="includes/sidebar.html"
+                onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+        <!-- END SIDEBAR -->
+
+        <!-- START APP CONTENT -->
+        <div class="app-content app-sidebar-left">
+            <!-- START APP HEADER -->
+            <!--This is a hack script to cover shitty HTML specification that doesn't have include function, please change with php include instead-->
+            <iframe src="includes/header.html"
+                    onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+            <!-- END APP HEADER  -->
+
+            <!-- START PAGE HEADING -->
+            <div class="app-heading app-heading-bordered app-heading-page">
+                <div class="icon icon-lg">
+                    <span class="icon-laptop"></span>
+                </div>
+                <div class="title">
+                    <h1>Surveyor</h1>
+                    <p>Sarana dan Prasarana</p>
+                </div>
+            </div>
+            <div class="app-heading-container app-heading-bordered bottom">
+                <ul class="breadcrumb">
+                    <li><a href="#">E-Keluhan</a></li>
+                    <li class="active">List keluhan</li>
+                </ul>
+            </div>
+            <!-- END PAGE HEADING -->
+
+            <!-- START PAGE CONTAINER -->
+            <div class="container">
+                <div class="app-content-separate app-content-separated-left">
+
+                    <div class="app-content-separate-left" data-separate-control-height="false">
+                        <div class="app-content-separate-panel padding-20 visible-mobile">
+                            <div class="pull-left">
+                                <h4 class="text-sm text-uppercase text-bolder margin-bottom-0">Navigation</h4>
+                                <p class="subheader">Click on navigation button</p>
+                            </div>
+                            <button class="btn btn-default btn-icon pull-right" data-separate-toggle-panel=".app-content-separate-left"><span class="icon-menu"></span></button>
+                        </div>
+                        <div class="app-content-separate-content padding-10">
+                            <div class="input-group margin-bottom-20">
+                                <div class="input-group-addon">
+                                    <span class="fa fa-search"></span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Keyword...">
+                            </div>
+
+                            <div class="list-group list-group-noborder">
+                                <a href="#" class="list-group-item active"><span class="icon-warning text-muted"></span> Belum ditangani <span class="badge badge-primary badge-bordered">3</span></a>
+                                <a href="#" class="list-group-item text-bold"><span class="icon-hourglass text-muted"></span> Sedang Ditangani <span class="badge badge-default badge-bordered">5</span></a>
+                                <a href="#" class="list-group-item text-bold"><span class="icon-checkmark-circle text-muted"></span> Selesai <span class="badge badge-default badge-bordered">4</span></a>
+                                <a href="#" class="list-group-item text-bold"><span class="icon-sync text-muted"></span> Dibuka kembali <span class="badge badge-default badge-bordered">0</span></a>
+                            </div>
+
+                            <div class="app-heading app-heading-small title-only app-heading-condensed heading-transparent">
+                                <div class="title">
+                                    <h3>Labels & Groups</h3>
+                                </div>
+                                <div class="heading-elements">
+                                    <button class="btn btn-default btn-icon"><span class="fa fa-plus"></span></button>
+                                </div>
+                            </div>
+                            <div class="block-content">
+                                <div class="list-group list-group-condensed list-group-noborder">
+                                    <a href="#" class="list-group-item"><span class="label label-primary label-bordered label-ghost margin-right-10">S</span> Sarana & Prasarana</a>
+                                    <a href="#" class="list-group-item"><span class="label label-success label-bordered label-ghost margin-right-10">B</span> Bangunan</a>
+                                    <a href="#" class="list-group-item"><span class="label label-info label-bordered label-ghost margin-right-10">T</span> Tenaga Kependidikan</a>
+                                    <a href="#" class="list-group-item"><span class="label label-warning label-bordered label-ghost margin-right-10">K</span> Kebersihan</a>
+                                    <a href="#" class="list-group-item"><span class="label label-danger label-bordered label-ghost margin-right-10">I</span> Insiden & Pelanggaran Tata Tertib</a>
+                                    <a href="#" class="list-group-item"><span class="label label-default label-bordered label-ghost margin-right-10">L</span> Lainnya</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="app-content-separate-content">
+                        <!-- CONTENT CONTAINER -->
+                        <div class="container">
+
+                            <div class="block block-condensed">
+                                <div class="app-heading">
+                                    <div class="title">
+                                        <h2>Monitor Rusak</h2>
+                                        <p>09 Oktober 2017, 15:33 <span class="icon-map-marker"></span> AA-301</p>
+                                        <p class="margin-top-5"><span class="label label-danger">Belum ditangani</span>&nbsp;<span class="label label-primary">Sarana dan Prasarana</span></p>
+                                    </div>
+                                    <div class="heading-elements">
+                                        <div class="contact contact-rounded contact-bordered contact-lg status-online" style="width: 240px;">
+                                            <img src="../resources/assets/images/users/user_5.jpg">
+                                            <div class="contact-container">
+                                                <a href="#">Juan Obrien</a>
+                                                <span>Mahasiswa</span>
+                                            </div>
+                                            <div class="contact-controls dropdown dropdown-menu-right">
+                                                <button class="btn btn-default btn-icon dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"><span class="fa fa-cogs"></span></button>
+                                                <ul class="dropdown-menu dropdown-menu-right" role="menu">
+                                                    <li><a href="#"><span class="icon-exit-up"></span> Proses ke level selanjutnya</a></li>
+                                                    <li><a href="#"><span class="icon-hand"></span> Tutup keluhan</a></li>
+                                                    <li class="divider"></li>
+                                                    <li><a href="#"><span class="icon-cross-circle"></span> Tutup dialog</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="block-content">
+                                    <p class="text-bold">Hello Dmitry,</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ligula risus, viverra sit amet purus id, ullamcorper venenatis leo. Ut vitae semper neque. Nunc vel lacus vel erat sodales ultricies sed sed massa. Duis non elementum velit. Nunc quis molestie dui. Nullam ullamcorper lectus in mattis volutpat. Nunc egestas felis sit amet ultrices euismod. Donec lacinia neque vel quam pharetra, non dignissim arcu semper. Donec ultricies, neque ut vehicula ultrices, ligula velit sodales purus, eget eleifend libero risus sed turpis. Fusce hendrerit vel dui ut pulvinar. Ut sed tristique ante, sed egestas turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <blockquote>
+                                        <p>Fusce sit amet dui at nunc laoreet facilisis. Proin consequat orci sollicitudin sem cursus, quis vehicula eros ultrices. Cras fermentum justo at nibh tincidunt, consectetur elementum est aliquam.</p>
+                                        <footer>Someone famous in source title</footer>
+                                    </blockquote>
+                                    <p>Nam dignissim convallis nulla, vitae porta purus fringilla ac. Praesent consectetur ex eu dui efficitur sollicitudin. Mauris libero est, aliquam a diam maximus, dignissim laoreet lacus. Nulla ac nisi sodales, auctor dui et, consequat turpis. Cras dolor turpis, sagittis vel elit in, varius elementum arcu. Mauris aliquet lorem ac enim blandit, nec consequat tortor auctor. Sed eget nunc at justo congue mollis eget a urna. Phasellus in mauris quis tortor porta tristique at a risus.</p>
+                                    <p class="text-bold">Best Regards<br>John Doe</p>
+                                </div>
+                                <div class="block-divider"></div>
+                                <div class="block-content text-bold">
+                                    <h5 class="text-bold text-rg margin-bottom-5"><span class="fa fa-file-o"></span> Gambar keluhan</h5>
+                                    <ul class="app-feature-gallery" style="height: 156.5px;">
+                                        <li>
+                                            <div class="tile-basic">
+                                                <div class="tile-image">
+                                                    <img src="../resources/assets/images/preview/img-8.jpg" alt="">
+                                                    <div class="tile-image-title">
+                                                        <a href="#" class="tile-title">Lorem Ipsum Dolor</a>
+                                                        <p>Example of subtitle that goes right here</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="tile-basic">
+                                                <div class="tile-image">
+                                                    <img src="../resources/assets/images/preview/img-1.jpg" alt="">
+                                                    <div class="tile-image-title">
+                                                        <a href="#" class="tile-title">Lorem Ipsum Dolor</a>
+                                                        <p>Example of subtitle that goes right here</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="tile-basic">
+                                                <div class="tile-image">
+                                                    <img src="../resources/assets/images/preview/img-2.jpg" alt="">
+                                                    <div class="tile-image-title">
+                                                        <a href="#" class="tile-title">Lorem Ipsum Dolor</a>
+                                                        <p>Example of subtitle that goes right here</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="tile-basic">
+                                                <div class="tile-image">
+                                                    <img src="../resources/assets/images/preview/img-3.jpg" alt="">
+                                                    <div class="tile-image-title">
+                                                        <a href="#" class="tile-title">Lorem Ipsum Dolor</a>
+                                                        <p>Example of subtitle that goes right here</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="block block-condensed block-arrow-top">
+                                <div class="app-heading">
+                                    <div class="title">
+                                        <h2>Post Reply</h2>
+                                        <p>To: John Doe</p>
+                                    </div>
+                                </div>
+                                <div class="block-content">
+                                    <div class="form-group">
+                                        <textarea class="form-control" rows="3" placeholder="Post your reply"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="pull-left">
+                                            <div class="form-group">
+                                                <a href="#" class="file-input btn btn-default"><input id="image_input" type="file" class="file" accept="image/*" title="Add attachment">Add attachment</a><span class="file-input-name"></span>
+                                            </div>
+                                        </div>
+                                        <div class="pull-right">
+                                            <button class="btn btn-danger"><span class="fa fa-envelope"></span> Send Message</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- CONTENT CONTAINER -->
+                    </div>
+
+                </div>
+            </div>
+            <!-- END PAGE CONTAINER -->
+        </div>
+        <!-- END APP CONTENT -->
+    </div>
+    <!-- END APP CONTAINER -->
+
+</div>
+<!-- END APP WRAPPER -->
+
+<!-- START SCRIPTS -->
+<script type="text/javascript" src="../resources/js/vendor/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/moment/moment.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/customscrollbar/jquery.mCustomScrollbar.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/bootstrap-select/bootstrap-select.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/select2/select2.full.min.js"></script>
+<script type="text/javascript"
+        src="../resources/js/vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/maskedinput/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/form-validator/jquery.form-validator.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/noty/jquery.noty.packaged.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/datatables/dataTables.bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/knob/jquery.knob.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/jvectormap/jquery-jvectormap.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/jvectormap/jquery-jvectormap-us-aea-en.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/sparkline/jquery.sparkline.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/morris/raphael.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/morris/morris.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/rickshaw/d3.v3.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/rickshaw/rickshaw.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/isotope/isotope.pkgd.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/dropzone/dropzone.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/nestable/jquery.nestable.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/cropper/cropper.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/tableexport/tableExport.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/tableexport/jquery.base64.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/tableexport/html2canvas.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/tableexport/jspdf/libs/sprintf.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/tableexport/jspdf/jspdf.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/tableexport/jspdf/libs/base64.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/bootstrap-daterange/daterangepicker.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/bootstrap-tour/bootstrap-tour.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/fullcalendar/fullcalendar.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/smartwizard/jquery.smartWizard.js"></script>
+
+<script type="text/javascript" src="../resources/js/keluhan_detail.js"></script>
+
+<script type="text/javascript" src="../resources/js/app.js"></script>
+<script type="text/javascript" src="../resources/js/app_plugins.js"></script>
+<script type="text/javascript" src="../resources/js/app_demo.js"></script>
+
+
+<!-- END SCRIPTS -->
+</body>
+</html>
