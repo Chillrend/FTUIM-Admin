@@ -36,127 +36,6 @@ var massive_data = {
     }
 };
 
-var varshit = {
-    "monthly_report": {
-        "01": {
-            "timestamp": "2019-01",
-            "FACILITIES_AND_INFRASTRUCTURE": 0,
-            "BUILDINGS": 0,
-            "HUMAN_RESOURCE": 0,
-            "CLEANING_AND_GARDENING": 0,
-            "INCIDENT_AND_RULE_VIOLATION": 0,
-            "OTHERS": 0
-        },
-        "02": {
-            "timestamp": "2019-02",
-            "FACILITIES_AND_INFRASTRUCTURE": 0,
-            "BUILDINGS": 0,
-            "HUMAN_RESOURCE": 0,
-            "CLEANING_AND_GARDENING": 0,
-            "INCIDENT_AND_RULE_VIOLATION": 0,
-            "OTHERS": 0
-        },
-        "03": {
-            "timestamp": "2019-03",
-            "FACILITIES_AND_INFRASTRUCTURE": 0,
-            "BUILDINGS": 0,
-            "HUMAN_RESOURCE": 0,
-            "CLEANING_AND_GARDENING": 0,
-            "INCIDENT_AND_RULE_VIOLATION": 0,
-            "OTHERS": 0
-        },
-        "04": {
-            "timestamp": "2019-04",
-            "FACILITIES_AND_INFRASTRUCTURE": 0,
-            "BUILDINGS": 0,
-            "HUMAN_RESOURCE": 0,
-            "CLEANING_AND_GARDENING": 0,
-            "INCIDENT_AND_RULE_VIOLATION": 0,
-            "OTHERS": 0
-        },
-        "05": {
-            "timestamp": "2019-05",
-            "FACILITIES_AND_INFRASTRUCTURE": 0,
-            "BUILDINGS": 0,
-            "HUMAN_RESOURCE": 0,
-            "CLEANING_AND_GARDENING": 0,
-            "INCIDENT_AND_RULE_VIOLATION": 0,
-            "OTHERS": 0
-        },
-        "06": {
-            "timestamp": "2019-06",
-            "FACILITIES_AND_INFRASTRUCTURE": 0,
-            "BUILDINGS": 0,
-            "HUMAN_RESOURCE": 0,
-            "CLEANING_AND_GARDENING": 0,
-            "INCIDENT_AND_RULE_VIOLATION": 0,
-            "OTHERS": 0
-        },
-        "07": {
-            "timestamp": "2019-07",
-            "FACILITIES_AND_INFRASTRUCTURE": 0,
-            "BUILDINGS": 0,
-            "HUMAN_RESOURCE": 0,
-            "CLEANING_AND_GARDENING": 0,
-            "INCIDENT_AND_RULE_VIOLATION": 0,
-            "OTHERS": 0
-        },
-        "08": {
-            "timestamp": "2019-08",
-            "FACILITIES_AND_INFRASTRUCTURE": 2,
-            "BUILDINGS": 0,
-            "HUMAN_RESOURCE": 0,
-            "CLEANING_AND_GARDENING": 1,
-            "INCIDENT_AND_RULE_VIOLATION": 1,
-            "OTHERS": 0
-        },
-        "09": {
-            "timestamp": "2019-09",
-            "FACILITIES_AND_INFRASTRUCTURE": 4,
-            "BUILDINGS": 0,
-            "HUMAN_RESOURCE": 0,
-            "CLEANING_AND_GARDENING": 2,
-            "INCIDENT_AND_RULE_VIOLATION": 2,
-            "OTHERS": 0
-        },
-        "10": {
-            "timestamp": "2019-10",
-            "FACILITIES_AND_INFRASTRUCTURE": 0,
-            "BUILDINGS": 0,
-            "HUMAN_RESOURCE": 0,
-            "CLEANING_AND_GARDENING": 0,
-            "INCIDENT_AND_RULE_VIOLATION": 2,
-            "OTHERS": 3
-        },
-        "11": {
-            "timestamp": "2019-11",
-            "FACILITIES_AND_INFRASTRUCTURE": 0,
-            "BUILDINGS": 0,
-            "HUMAN_RESOURCE": 0,
-            "CLEANING_AND_GARDENING": 0,
-            "INCIDENT_AND_RULE_VIOLATION": 0,
-            "OTHERS": 0
-        },
-        "12": {
-            "timestamp": "2019-12",
-            "FACILITIES_AND_INFRASTRUCTURE": 0,
-            "BUILDINGS": 0,
-            "HUMAN_RESOURCE": 0,
-            "CLEANING_AND_GARDENING": 0,
-            "INCIDENT_AND_RULE_VIOLATION": 0,
-            "OTHERS": 0
-        }
-    }
-};
-
-var notshit = [];
-
-for (let key in varshit.monthly_report){
-    if(varshit.monthly_report.hasOwnProperty(key)){
-        notshit.push(varshit.monthly_report[key])
-    }
-}
-
 function getHumanReadableKategoriString(kategori){
     switch (kategori){
         case "FACILITIES_AND_INFRASTRUCTURE" :
@@ -226,11 +105,11 @@ $(document).ready(function () {
     var chart = new Morris.Line({
         element: "mingguan-chart-bar",
         //data laporan per bulan
-        data: notshit,
+        data: massive_data.laporan_diterima_per_bulan,
         xkey: 'timestamp',
         //please add F for Lainnya
-        ykeys: ['FACILITIES_AND_INFRASTRUCTURE', 'BUILDINGS', 'HUMAN_RESOURCE', 'CLEANING_AND_GARDENING', 'INCIDENT_AND_RULE_VIOLATIONS', 'OTHERS'],
-        labels: ['Sarpras', 'Gedung', 'HR', 'Kebersihan', 'Insiden/Tata tertib', 'Lainnya']
+        ykeys: ['a', 'b', 'c', 'd', 'e'],
+        labels: ['Sarpras', 'Gedung', 'HR', 'Kebersihan', 'Insiden/Tata tertib']
     });
 
     var top_cat_chart = new Chart(document.getElementById('top-kategori-chart'), {

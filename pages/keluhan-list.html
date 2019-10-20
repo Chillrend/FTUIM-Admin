@@ -17,6 +17,7 @@
     <meta name="theme-color" content="#ffffff">
     <!-- END META SECTION -->
     <!-- CSS INCLUDE -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../resources/css/styles.css">
     <link rel="stylesheet" href="../resources/css/font-import.css">
     <!-- EOF CSS INCLUDE -->
@@ -62,53 +63,6 @@
 
             <!-- START PAGE CONTAINER -->
             <div class="container">
-                <div class="app-content-separate app-content-separated-left">
-
-                    <div class="app-content-separate-left" data-separate-control-height="false">
-                        <div class="app-content-separate-panel padding-20 visible-mobile">
-                            <div class="pull-left">
-                                <h4 class="text-sm text-uppercase text-bolder margin-bottom-0">Navigation</h4>
-                                <p class="subheader">Click on navigation button</p>
-                            </div>
-                            <button class="btn btn-default btn-icon pull-right" data-separate-toggle-panel=".app-content-separate-left"><span class="icon-menu"></span></button>
-                        </div>
-                        <div class="app-content-separate-content padding-10">
-                            <div class="input-group margin-bottom-20">
-                                <div class="input-group-addon">
-                                    <span class="fa fa-search"></span>
-                                </div>
-                                <input type="text" class="form-control" placeholder="Keyword...">
-                            </div>
-
-                            <div class="list-group list-group-noborder">
-                                <a href="#" class="list-group-item active"><span class="icon-warning text-muted"></span> Belum ditangani <span class="badge badge-primary badge-bordered">3</span></a>
-                                <a href="#" class="list-group-item text-bold"><span class="icon-hourglass text-muted"></span> Sedang Ditangani <span class="badge badge-default badge-bordered">5</span></a>
-                                <a href="#" class="list-group-item text-bold"><span class="icon-checkmark-circle text-muted"></span> Selesai <span class="badge badge-default badge-bordered">4</span></a>
-                                <a href="#" class="list-group-item text-bold"><span class="icon-sync text-muted"></span> Dibuka kembali <span class="badge badge-default badge-bordered">0</span></a>
-                            </div>
-
-                            <div class="app-heading app-heading-small title-only app-heading-condensed heading-transparent">
-                                <div class="title">
-                                    <h3>Labels & Groups</h3>
-                                </div>
-                                <div class="heading-elements">
-                                    <button class="btn btn-default btn-icon"><span class="fa fa-plus"></span></button>
-                                </div>
-                            </div>
-                            <div class="block-content">
-                                <div class="list-group list-group-condensed list-group-noborder">
-                                    <a href="#" class="list-group-item"><span class="label label-primary label-bordered label-ghost margin-right-10">S</span> Sarana & Prasarana</a>
-                                    <a href="#" class="list-group-item"><span class="label label-success label-bordered label-ghost margin-right-10">B</span> Bangunan</a>
-                                    <a href="#" class="list-group-item"><span class="label label-info label-bordered label-ghost margin-right-10">T</span> Tenaga Kependidikan</a>
-                                    <a href="#" class="list-group-item"><span class="label label-warning label-bordered label-ghost margin-right-10">K</span> Kebersihan</a>
-                                    <a href="#" class="list-group-item"><span class="label label-danger label-bordered label-ghost margin-right-10">I</span> Insiden & Pelanggaran Tata Tertib</a>
-                                    <a href="#" class="list-group-item"><span class="label label-default label-bordered label-ghost margin-right-10">L</span> Lainnya</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="app-content-separate-content">
                         <!-- CONTENT CONTAINER -->
                         <div class="container">
 
@@ -116,9 +70,7 @@
 
                                 <div class="block-content margin-bottom-20 padding-left-15">
                                     <div class="btn-group margin-right-10">
-                                        <button class="btn btn-default btn-icon"><span class="icon-pencil"></span></button>
-                                        <button class="btn btn-default btn-icon"><span class="icon-checkmark-circle"></span></button>
-                                        <button class="btn btn-default btn-icon"><span class="icon-trash"></span></button>
+                                        <button class="btn btn-danger"><span class="icon-trash"></span> Hapus</button>
                                     </div>
 
                                     <div class="pull-right">
@@ -137,17 +89,20 @@
                                 <div class="table-responsive">
                                     <table class="table table-head-light table-striped">
                                         <thead>
-                                        <tr>
-                                            <th>
-                                                <div class="app-checkbox"><label><input type="checkbox" class="checkall">&nbsp;</label></div>
-                                            </th>
-                                            <th width="20%">Pelapor</th>
-                                            <th width="40%">Subjek Laporan</th>
-                                            <th width="15%">Tanggal melapor</th>
-                                            <th width="15%">Terakhir diubah</th>
-                                        </tr>
+                                            <tr>
+                                                <th>
+                                                    <div class="app-checkbox"><label><input type="checkbox" class="checkall">&nbsp;</label></div>
+                                                </th>
+                                                <th width="10%">Pelapor</th>
+                                                <th width="20%">Judul Laporan</th>
+                                                <th width="20%">Kategori Laporan</th>
+                                                <th width="20%">Status Laporan</th>
+                                                <th width="20%">Tanggal melapor</th>
+                                                <th width="20%">Action</th>
+                                            </tr>
                                         </thead>
                                         <tbody id="table-blyat">
+
                                         <!--Appended by JS-->
                                         </tbody>
                                     </table>
@@ -174,11 +129,10 @@
                                 </ul>
                             </nav>
 
-                        </div>
                         <!-- CONTENT CONTAINER -->
                     </div>
 
-                </div>
+
             </div>
             <!-- END PAGE CONTAINER -->
 
@@ -190,7 +144,32 @@
 
 </div>
 <!-- END APP WRAPPER -->
+<template id="keluhan-row">
+    <tr>
+        <td>
 
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+        <td>
+
+        </td>
+
+    </tr>
+</template>
 <!-- START SCRIPTS -->
 <script type="text/javascript" src="../resources/js/vendor/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="../resources/js/vendor/jquery/jquery-ui.min.js"></script>

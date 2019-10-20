@@ -17,7 +17,10 @@
     <meta name="theme-color" content="#ffffff">
     <!-- END META SECTION -->
     <!-- CSS INCLUDE -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../resources/css/styles.css">
+    <!--override template CSS-->
+    <link rel="stylesheet" href="../resources/css/override.css">
     <link rel="stylesheet" href="../resources/css/font-import.css">
     <!-- EOF CSS INCLUDE -->
 </head>
@@ -35,7 +38,7 @@
         <!-- END SIDEBAR -->
 
         <!-- START APP CONTENT -->
-        <div class="app-content app-sidebar-left">
+        <div class="app-content app-sidebar-left" id="append_main">
             <!-- START APP HEADER -->
             <!--This is a hack script to cover shitty HTML specification that doesn't have include function, please change with php include instead-->
             <iframe src="includes/header.html"
@@ -49,7 +52,7 @@
                 </div>
                 <div class="title">
                     <h1>Surveyor</h1>
-                    <p>Sarana dan Prasarana</p>
+                    <p id="specialities"></p>
                 </div>
             </div>
             <div class="app-heading-container app-heading-bordered bottom">
@@ -60,105 +63,13 @@
             </div>
             <!-- END PAGE HEADING -->
 
-            <!-- START PAGE CONTAINER -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-4">
-
-                        <ul class="app-feature-gallery app-feature-gallery-noshadow margin-bottom-0"
-                            style="height: 132px;">
-                            <li>
-                                <!-- START WIDGET -->
-                                <div class="app-widget-tile app-widget-highlight">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="icon icon-lg">
-                                                <span class="icon-inbox"></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <div class="line">
-                                                <div class="title">Jumlah Keluhan</div>
-                                            </div>
-                                            <div class="intval text-left">25</div>
-                                            <div class="line">
-                                                <div class="subtitle"><a href="#">Laporan masuk minggu ini</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END WIDGET -->
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    <div class="col-md-4">
-
-                        <ul class="app-feature-gallery app-feature-gallery-noshadow margin-bottom-0"
-                            style="height: 132px;">
-                            <li>
-                                <!-- START WIDGET -->
-                                <div class="app-widget-tile app-widget-highlight">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="icon icon-lg">
-                                                <span class="icon-warning text-danger"></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <div class="line">
-                                                <div class="title">Jumlah Keluhan Mingguan</div>
-                                            </div>
-                                            <div class="intval text-left">12</div>
-                                            <div class="line">
-                                                <div class="subtitle"><a href="#">Keluhan belum ditangani</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END WIDGET -->
-                            </li>
-                        </ul>
-
-                    </div>
-
-                    <div class="col-md-4">
-
-                        <ul class="app-feature-gallery app-feature-gallery-noshadow margin-bottom-0"
-                            style="height: 132px;">
-                            <li>
-                                <!-- START WIDGET -->
-                                <div class="app-widget-tile app-widget-highlight">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <div class="icon icon-lg">
-                                                <span class="icon-checkmark-circle text-success"></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-8">
-                                            <div class="line">
-                                                <div class="title">Jumlah Keluhan Mingguan</div>
-                                            </div>
-                                            <div class="intval text-left">13</div>
-                                            <div class="line">
-                                                <div class="subtitle"><a href="#">Keluhan sudah ditangani</a></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- END WIDGET -->
-                            </li>
-                        </ul>
-
-                    </div>
-
-                </div>
-
-
-
+            <!-- START CONTENT TABS -->
+            <div class="app-content-tabs">
+                <ul id="tabs">
+                    <!-- Appended by JS -->
+                </ul>
             </div>
-            <!-- END PAGE CONTAINER -->
+            <!-- END CONTENT TABS -->
 
         </div>
         <!-- END APP CONTENT -->
@@ -223,11 +134,11 @@
 <script type="text/javascript" src="../resources/js/vendor/fullcalendar/fullcalendar.js"></script>
 <script type="text/javascript" src="../resources/js/vendor/smartwizard/jquery.smartWizard.js"></script>
 
+<script type="text/javascript" src="../resources/js/script_index.js"></script>
+
 <script type="text/javascript" src="../resources/js/app.js"></script>
 <script type="text/javascript" src="../resources/js/app_plugins.js"></script>
 <script type="text/javascript" src="../resources/js/app_demo.js"></script>
-
-<script type="text/javascript" src="../resources/js/script_index.js"></script>
 <!-- END SCRIPTS -->
 </body>
 </html>

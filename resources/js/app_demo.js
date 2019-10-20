@@ -467,8 +467,8 @@ var app_demo = {
             }
         }
     }, settings: function () {
-        var a = $("<div></div>").addClass("app-settings").append($("<div></div>").addClass("app-settings-button").html('<span class="icon-magic-wand"></span>')),
-            e = $("<div></div>").addClass("app-settings-themes-header").append("<span>Header themes</span>"),
+        // var a = $("<div></div>").addClass("app-settings").append($("<div></div>").addClass("app-settings-button").html('<span class="icon-magic-wand"></span>')),
+           var e = $("<div></div>").addClass("app-settings-themes-header").append("<span>Header themes</span>"),
             t = $("<div></div>").addClass("app-settings-themes-navigation").append("<span>Navigation themes</span>"),
             o = $("<div></div>").addClass("app-settings-themes-footer").append("<span>Footer themes</span>"),
             n = new Array;
