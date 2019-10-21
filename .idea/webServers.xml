@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="15e8f32c-5820-4883-b54b-8a7b416d52b9" name="ccit" url="http://pengaduan.ccit-solution.com">
+        <fileTransfer host="pengaduan.ccit-solution.com" port="441" rootFolder="/var/www/template/public/FTUIM-Admin" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="441" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
