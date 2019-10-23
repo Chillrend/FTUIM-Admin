@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Keluhan FTUI</title>
+
+    <!-- META SECTION -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../favicon-16x16.png">
+    <link rel="manifest" href="../../site.webmanifest">
+    <link rel="mask-icon" href="../../safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <!-- END META SECTION -->
+    <!-- CSS INCLUDE -->
+    <link rel="stylesheet" href="../../resources/css/styles.css">
+    <link rel="stylesheet" href="../../resources/css/font-import.css">
+    <link rel="stylesheet" href="../../resources/css/override.css">
+    <!-- EOF CSS INCLUDE -->
+</head>
+<body>
+
+<!-- APP WRAPPER -->
+<div class="app">
+
+    <!-- START APP CONTAINER -->
+    <div class="app-container">
+        <!-- START SIDEBAR -->
+        <!--This is a hack script to cover shitty HTML specification that doesn't have include function, please change with php include instead-->
+        <iframe src="../includes/sidebar.html"
+                onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+        <!-- END SIDEBAR -->
+
+        <!-- START APP CONTENT -->
+        <div class="app-content app-sidebar-left">
+            <!-- START APP HEADER -->
+            <!--This is a hack script to cover shitty HTML specification that doesn't have include function, please change with php include instead-->
+            <iframe src="../includes/header.html"
+                    onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+            <!-- END APP HEADER  -->
+
+            <!-- START PAGE HEADING -->
+            <div id="ignore-heading-1" class="app-heading app-heading-bordered app-heading-page">
+                <div class="icon icon-lg">
+                    <span class="icon-laptop"></span>
+                </div>
+                <div class="title">
+                    <h1>Manager</h1>
+                    <p>Management Laporan Keluhan</p>
+                </div>
+            </div>
+            <div id="ignore-heading-2" class="app-heading-container app-heading-bordered bottom">
+                <ul class="breadcrumb">
+                    <li><a href="#">E-Keluhan</a></li>
+                    <li class="active">Rekapitulasi Laporan</li>
+                </ul>
+            </div>
+            <!-- END PAGE HEADING -->
+            <!-- START PAGE CONTAINER -->
+            <div class="container" id="pnewrint">
+                <!--START REKAPITULASI MINGGUAN-->
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <!-- START ALLTIME CATEGORY -->
+                        <div class="block block-condensed">
+                            <div class="app-heading">
+                                <div class="title">
+                                    <h2>Laporan per Kategori</h2>
+                                    <p>Jumlah laporan sepanjang waktu per-kategori</p>
+                                </div>
+                            </div>
+                            <div class="block-content">
+                                <table class="table table-striped table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th>Kategori</th>
+                                        <th>Laporan Diterima</th>
+                                        <th>Laporan Terselesaikan</th>
+                                        <th>Laporan belum terselesaikan</th>
+                                        <th>Persentase penyelesaian</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Sarana dan Prasarana</td>
+                                        <td>567</td>
+                                        <td>497</td>
+                                        <td>90</td>
+                                        <td>98.87%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Gedung</td>
+                                        <td>567</td>
+                                        <td>497</td>
+                                        <td>90</td>
+                                        <td>98.87%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tenaga Akademik</td>
+                                        <td>567</td>
+                                        <td>497</td>
+                                        <td>90</td>
+                                        <td>98.87%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kebersihan</td>
+                                        <td>567</td>
+                                        <td>497</td>
+                                        <td>90</td>
+                                        <td>98.87%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Insiden/Pelanggaran Tata Tertib</td>
+                                        <td>567</td>
+                                        <td>497</td>
+                                        <td>90</td>
+                                        <td>98.87%</td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <!-- EOF ALLTIME CATEGORY -->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!-- START PRODUCT SALES HISTORY -->
+                        <div class="block block-condensed">
+                            <div class="app-heading">
+                                <div class="title">
+                                    <h2>Sejarah laporan : Kategori Sarana & prasarana</h2>
+                                    <p>Laporan masuk per-bulan</p>
+                                </div>
+                            </div>
+
+                            <div class="block-content">
+                                <div class="app-chart-holder" id="bulan-sarpras" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                        <!-- END PRODUCT SALES HISTORY -->
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <!-- START PRODUCT SALES HISTORY -->
+                        <div class="block block-condensed">
+                            <div class="app-heading">
+                                <div class="title">
+                                    <h2>Sejarah laporan : Kategori Gedung</h2>
+                                    <p>Laporan masuk per-bulan</p>
+                                </div>
+                            </div>
+
+                            <div class="block-content">
+                                <div class="app-chart-holder" id="bulan-gedung" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                        <!-- END PRODUCT SALES HISTORY -->
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!-- START PRODUCT SALES HISTORY -->
+                        <div class="block block-condensed">
+                            <div class="app-heading">
+                                <div class="title">
+                                    <h2>Sejarah laporan : Kategori Tenaga kependidikan</h2>
+                                    <p>Laporan masuk per-bulan</p>
+                                </div>
+                            </div>
+
+                            <div class="block-content">
+                                <div class="app-chart-holder" id="bulan-hr" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                        <!-- END PRODUCT SALES HISTORY -->
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <!-- START PRODUCT SALES HISTORY -->
+                        <div class="block block-condensed">
+                            <div class="app-heading">
+                                <div class="title">
+                                    <h2>Sejarah laporan : Kategori Kebersihan</h2>
+                                    <p>Laporan masuk per-bulan</p>
+                                </div>
+                            </div>
+
+                            <div class="block-content">
+                                <div class="app-chart-holder" id="bulan-kebersihan" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                        <!-- END PRODUCT SALES HISTORY -->
+
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <!-- START PRODUCT SALES HISTORY -->
+                        <div class="block block-condensed">
+                            <div class="app-heading">
+                                <div class="title">
+                                    <h2>Sejarah laporan : Kategori Insiden dan tata tertib</h2>
+                                    <p>Laporan masuk per-bulan</p>
+                                </div>
+                            </div>
+
+                            <div class="block-content">
+                                <div class="app-chart-holder" id="bulan-tatatertib" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                        <!-- END PRODUCT SALES HISTORY -->
+
+                    </div>
+
+                    <div class="col-md-6">
+
+                        <!-- START PRODUCT SALES HISTORY -->
+                        <div class="block block-condensed">
+                            <div class="app-heading">
+                                <div class="title">
+                                    <h2>Sejarah laporan : Kategori Lainnya</h2>
+                                    <p>Laporan masuk per-bulan</p>
+                                </div>
+                            </div>
+
+                            <div class="block-content">
+                                <div class="app-chart-holder" id="bulan-lainnya" style="height: 300px;"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- END PRODUCT SALES HISTORY -->
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8">
+
+                        <!-- START PRODUCT SALES HISTORY -->
+                        <div class="block block-condensed">
+                            <div class="app-heading">
+                                <div class="title">
+                                    <h2>Sejarah laporan : Keseluruhan</h2>
+                                    <p>Laporan masuk per-bulan</p>
+                                </div>
+                            </div>
+
+                            <div class="block-content">
+                                <div class="app-chart-holder" id="mingguan-chart-bar" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                        <!-- END PRODUCT SALES HISTORY -->
+
+                    </div>
+
+                    <div class="col-md-4">
+                        <!-- START TOP STORES -->
+                        <div class="block block-condensed">
+                            <div class="app-heading">
+                                <div class="title">
+                                    <h2>Top 5 Kategori Keluhan</h2>
+                                    <p>Kategori laporan terbanyak</p>
+                                </div>
+                            </div>
+                            <div class="block-content">
+                                <canvas height="300px" id="top-kategori-chart"></canvas>
+                            </div>
+                        </div>
+                        <!-- END TOP STORES -->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-10">
+                        <a href="../printorexport.html" id="btn-go-export" class="btn btn-default"><span class="icon icon-printer"></span> Export
+                            ke PDF
+                        </a>
+                    </div>
+                </div>
+                <div id="test"></div>
+            </div>
+            <!-- END PAGE CONTAINER -->
+
+
+        </div>
+        <!-- END APP CONTENT -->
+
+    </div>
+    <!-- END APP CONTAINER -->
+
+</div>
+<!-- END APP WRAPPER -->
+
+<!-- START SCRIPTS -->
+<script type="text/javascript" src="../../resources/js/vendor/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/moment/moment.min.js"></script>
+
+<script type="text/javascript" src="../../resources/js/vendor/customscrollbar/jquery.mCustomScrollbar.min.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/bootstrap-select/bootstrap-select.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/select2/select2.full.min.js"></script>
+<script type="text/javascript"
+        src="../../resources/js/vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
+
+<script type="text/javascript" src="../../resources/js/vendor/maskedinput/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/form-validator/jquery.form-validator.min.js"></script>
+
+<script type="text/javascript" src="../../resources/js/vendor/noty/jquery.noty.packaged.js"></script>
+
+<script type="text/javascript" src="../../resources/js/vendor/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/datatables/dataTables.bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../../resources/js/vendor/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/knob/jquery.knob.min.js"></script>
+
+<script type="text/javascript" src="../../resources/js/vendor/jvectormap/jquery-jvectormap.min.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/jvectormap/jquery-jvectormap-us-aea-en.js"></script>
+
+<script type="text/javascript" src="../../resources/js/vendor/sparkline/jquery.sparkline.min.js"></script>
+
+<script type="text/javascript" src="../../resources/js/vendor/morris/raphael.min.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/morris/morris.min.js"></script>
+
+<script type="text/javascript" src="../../resources/js/vendor/rickshaw/d3.v3.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/rickshaw/rickshaw.min.js"></script>
+
+<script type="text/javascript" src="../../resources/js/vendor/isotope/isotope.pkgd.min.js"></script>
+
+<script type="text/javascript" src="../../resources/js/vendor/dropzone/dropzone.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/nestable/jquery.nestable.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/cropper/cropper.min.js"></script>
+
+<script type="text/javascript" src="../../resources/js/vendor/tableexport/tableExport.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/tableexport/jquery.base64.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="../../resources/js/vendor/bootstrap-daterange/daterangepicker.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/bootstrap-tour/bootstrap-tour.min.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/fullcalendar/fullcalendar.js"></script>
+<script type="text/javascript" src="../../resources/js/vendor/smartwizard/jquery.smartWizard.js"></script>
+
+<script type="text/javascript" src="../../resources/js/app.js"></script>
+<script type="text/javascript" src="../../resources/js/app_plugins.js"></script>
+<script type="text/javascript" src="../../resources/js/app_demo.js"></script>
+
+<script type="text/javascript" src="../../resources/js/manager-stat.js"></script>
+<!-- END SCRIPTS -->
+</body>
+</html>

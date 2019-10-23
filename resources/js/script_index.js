@@ -127,205 +127,165 @@ var data = [{day: "Senin", value: 1},
 
 function appendHtml(elem, id, isActive) {
     $(elem).append("<div class='container app-content-tab " + isActive + "' id='" + id + "' style=\"\">\n" +
-        "                <div class=\"row\">\n" +
-        "                    <div class=\"col-md-6\">\n" +
+        "        <div class=\"row\">\n" +
+        "            <div class=\"col-md-6\">\n" +
         "\n" +
-        "                        <ul class=\"app-feature-gallery app-feature-gallery-noshadow margin-bottom-0\"\n" +
-        "                            style=\"height: 20px;\">\n" +
-        "                            <li>\n" +
-        "                                <!-- START WIDGET -->\n" +
-        "                                <div class=\"app-widget-tile app-widget-highlight\">\n" +
-        "                                    <div class=\"row\">\n" +
-        "                                        <div class=\"col-sm-4\">\n" +
-        "                                            <div class=\"icon icon-lg\">\n" +
-        "                                                <span class=\"icon-inbox\"></span>\n" +
-        "                                            </div>\n" +
-        "                                        </div>\n" +
-        "                                        <div class=\"col-sm-8\">\n" +
-        "                                            <div class=\"line\">\n" +
-        "                                                <div class=\"title\">Jumlah seluruh laporan keluhan</div>\n" +
-        "                                            </div>\n" +
-        "                                            <div class=\"intval text-left\">25</div>\n" +
-        "                                            <div class=\"line\">\n" +
-        "                                                <div class=\"subtitle\"><a href=\"keluhan-list.html\">Lihat seluruh\n" +
-        "                                                    keluhan</a></div>\n" +
-        "                                            </div>\n" +
+        "                <ul class=\"app-feature-gallery app-feature-gallery-noshadow margin-bottom-0\"\n" +
+        "                    style=\"height: 20px;\">\n" +
+        "                    <li>\n" +
+        "                        <!-- START WIDGET -->\n" +
+        "                        <div class=\"app-widget-tile app-widget-highlight\">\n" +
+        "                            <div class=\"row\">\n" +
+        "                                <div class=\"col-sm-4\">\n" +
+        "                                    <div class=\"icon icon-lg\">\n" +
+        "                                        <span class=\"icon-inbox\"></span>\n" +
+        "                                    </div>\n" +
+        "                                </div>\n" +
+        "                                <div class=\"col-sm-8\">\n" +
+        "                                    <div class=\"line\">\n" +
+        "                                        <div class=\"title\">Jumlah seluruh laporan keluhan</div>\n" +
+        "                                    </div>\n" +
+        "                                    <div class=\"intval text-left\">25</div>\n" +
+        "                                    <div class=\"line\">\n" +
+        "                                        <div class=\"subtitle\"><a href=\"keluhan-list.html\">Lihat seluruh\n" +
+        "                                            keluhan</a></div>\n" +
+        "                                    </div>\n" +
+        "                                </div>\n" +
+        "                            </div>\n" +
+        "                        </div>\n" +
+        "                        <!-- END WIDGET -->\n" +
+        "                    </li>\n" +
+        "                </ul>\n" +
+        "\n" +
+        "            </div>\n" +
+        "\n" +
+        "            <div class=\"col-md-6\">\n" +
+        "\n" +
+        "                <ul class=\"app-feature-gallery app-feature-gallery-noshadow margin-bottom-0\"\n" +
+        "                    style=\"height: 20px;\">\n" +
+        "                    <li>\n" +
+        "                        <!-- START WIDGET -->\n" +
+        "                        <div class=\"app-widget-tile app-widget-highlight\">\n" +
+        "                            <div class=\"row\">\n" +
+        "                                <div class=\"col-sm-4\">\n" +
+        "                                    <div class=\"icon icon-lg\">\n" +
+        "                                        <span class=\"icon-warning text-danger\"></span>\n" +
+        "                                    </div>\n" +
+        "                                </div>\n" +
+        "                                <div class=\"col-sm-8\">\n" +
+        "                                    <div class=\"line\">\n" +
+        "                                        <div class=\"title\">Jumlah keluhan Belum ditangani</div>\n" +
+        "                                    </div>\n" +
+        "                                    <div class=\"intval text-left\">12</div>\n" +
+        "                                    <div class=\"line\">\n" +
+        "                                        <div class=\"subtitle\"><a href=\"keluhan-list.html\">Lihat keluhan</a>\n" +
         "                                        </div>\n" +
         "                                    </div>\n" +
         "                                </div>\n" +
-        "                                <!-- END WIDGET -->\n" +
-        "                            </li>\n" +
-        "                        </ul>\n" +
+        "                            </div>\n" +
+        "                        </div>\n" +
+        "                        <!-- END WIDGET -->\n" +
+        "                    </li>\n" +
+        "                </ul>\n" +
         "\n" +
-        "                    </div>\n" +
+        "            </div>\n" +
         "\n" +
-        "                    <div class=\"col-md-6\">\n" +
+        "        </div>\n" +
+        "        <div class=\"row\">\n" +
+        "            <div class=\"col-md-4\">\n" +
         "\n" +
-        "                        <ul class=\"app-feature-gallery app-feature-gallery-noshadow margin-bottom-0\"\n" +
-        "                            style=\"height: 20px;\">\n" +
-        "                            <li>\n" +
-        "                                <!-- START WIDGET -->\n" +
-        "                                <div class=\"app-widget-tile app-widget-highlight\">\n" +
-        "                                    <div class=\"row\">\n" +
-        "                                        <div class=\"col-sm-4\">\n" +
-        "                                            <div class=\"icon icon-lg\">\n" +
-        "                                                <span class=\"icon-warning text-danger\"></span>\n" +
-        "                                            </div>\n" +
-        "                                        </div>\n" +
-        "                                        <div class=\"col-sm-8\">\n" +
-        "                                            <div class=\"line\">\n" +
-        "                                                <div class=\"title\">Jumlah keluhan Belum ditangani</div>\n" +
-        "                                            </div>\n" +
-        "                                            <div class=\"intval text-left\">12</div>\n" +
-        "                                            <div class=\"line\">\n" +
-        "                                                <div class=\"subtitle\"><a href=\"keluhan-list.html\">Lihat keluhan</a>\n" +
-        "                                                </div>\n" +
-        "                                            </div>\n" +
+        "                <ul class=\"app-feature-gallery app-feature-gallery-noshadow margin-bottom-0\"\n" +
+        "                    style=\"height: 20px;\">\n" +
+        "                    <li>\n" +
+        "                        <!-- START WIDGET -->\n" +
+        "                        <div class=\"app-widget-tile app-widget-highlight\">\n" +
+        "                            <div class=\"row\">\n" +
+        "                                <div class=\"col-sm-4\">\n" +
+        "                                    <div class=\"icon icon-lg\">\n" +
+        "                                        <span class=\"icon-hourglass text-info\"></span>\n" +
+        "                                    </div>\n" +
+        "                                </div>\n" +
+        "                                <div class=\"col-sm-8\">\n" +
+        "                                    <div class=\"line\">\n" +
+        "                                        <div class=\"title\">keluhan sedang ditangani</div>\n" +
+        "                                    </div>\n" +
+        "                                    <div class=\"intval text-left\">12</div>\n" +
+        "                                    <div class=\"line\">\n" +
+        "                                        <div class=\"subtitle\"><a href=\"keluhan-list.html\">Lihat keluhan</a>\n" +
         "                                        </div>\n" +
         "                                    </div>\n" +
         "                                </div>\n" +
-        "                                <!-- END WIDGET -->\n" +
-        "                            </li>\n" +
-        "                        </ul>\n" +
+        "                            </div>\n" +
+        "                        </div>\n" +
+        "                        <!-- END WIDGET -->\n" +
+        "                    </li>\n" +
+        "                </ul>\n" +
         "\n" +
-        "                    </div>\n" +
+        "            </div>\n" +
         "\n" +
-        "                </div>\n" +
-        "                <div class=\"row\">\n" +
-        "                    <div class=\"col-md-4\">\n" +
+        "            <div class=\"col-md-4\">\n" +
         "\n" +
-        "                        <ul class=\"app-feature-gallery app-feature-gallery-noshadow margin-bottom-0\"\n" +
-        "                            style=\"height: 20px;\">\n" +
-        "                            <li>\n" +
-        "                                <!-- START WIDGET -->\n" +
-        "                                <div class=\"app-widget-tile app-widget-highlight\">\n" +
-        "                                    <div class=\"row\">\n" +
-        "                                        <div class=\"col-sm-4\">\n" +
-        "                                            <div class=\"icon icon-lg\">\n" +
-        "                                                <span class=\"icon-hourglass text-info\"></span>\n" +
-        "                                            </div>\n" +
-        "                                        </div>\n" +
-        "                                        <div class=\"col-sm-8\">\n" +
-        "                                            <div class=\"line\">\n" +
-        "                                                <div class=\"title\">keluhan sedang ditangani</div>\n" +
-        "                                            </div>\n" +
-        "                                            <div class=\"intval text-left\">12</div>\n" +
-        "                                            <div class=\"line\">\n" +
-        "                                                <div class=\"subtitle\"><a href=\"keluhan-list.html\">Lihat keluhan</a>\n" +
-        "                                                </div>\n" +
-        "                                            </div>\n" +
+        "                <ul class=\"app-feature-gallery app-feature-gallery-noshadow margin-bottom-0\"\n" +
+        "                    style=\"height: 20px;\">\n" +
+        "                    <li>\n" +
+        "                        <!-- START WIDGET -->\n" +
+        "                        <div class=\"app-widget-tile app-widget-highlight\">\n" +
+        "                            <div class=\"row\">\n" +
+        "                                <div class=\"col-sm-4\">\n" +
+        "                                    <div class=\"icon icon-lg\">\n" +
+        "                                        <span class=\"icon-warning text-success\"></span>\n" +
+        "                                    </div>\n" +
+        "                                </div>\n" +
+        "                                <div class=\"col-sm-8\">\n" +
+        "                                    <div class=\"line\">\n" +
+        "                                        <div class=\"title\">Keluhan sudah ditangani</div>\n" +
+        "                                    </div>\n" +
+        "                                    <div class=\"intval text-left\">5</div>\n" +
+        "                                    <div class=\"line\">\n" +
+        "                                        <div class=\"subtitle\"><a href=\"keluhan-list.html\">Lihat keluhan</a>\n" +
         "                                        </div>\n" +
         "                                    </div>\n" +
         "                                </div>\n" +
-        "                                <!-- END WIDGET -->\n" +
-        "                            </li>\n" +
-        "                        </ul>\n" +
+        "                            </div>\n" +
+        "                        </div>\n" +
+        "                        <!-- END WIDGET -->\n" +
+        "                    </li>\n" +
+        "                </ul>\n" +
         "\n" +
-        "                    </div>\n" +
+        "            </div>\n" +
         "\n" +
-        "                    <div class=\"col-md-4\">\n" +
+        "            <div class=\"col-md-4\">\n" +
         "\n" +
-        "                        <ul class=\"app-feature-gallery app-feature-gallery-noshadow margin-bottom-0\"\n" +
-        "                            style=\"height: 20px;\">\n" +
-        "                            <li>\n" +
-        "                                <!-- START WIDGET -->\n" +
-        "                                <div class=\"app-widget-tile app-widget-highlight\">\n" +
-        "                                    <div class=\"row\">\n" +
-        "                                        <div class=\"col-sm-4\">\n" +
-        "                                            <div class=\"icon icon-lg\">\n" +
-        "                                                <span class=\"icon-warning text-success\"></span>\n" +
-        "                                            </div>\n" +
-        "                                        </div>\n" +
-        "                                        <div class=\"col-sm-8\">\n" +
-        "                                            <div class=\"line\">\n" +
-        "                                                <div class=\"title\">Keluhan sudah ditangani</div>\n" +
-        "                                            </div>\n" +
-        "                                            <div class=\"intval text-left\">5</div>\n" +
-        "                                            <div class=\"line\">\n" +
-        "                                                <div class=\"subtitle\"><a href=\"keluhan-list.html\">Lihat keluhan</a>\n" +
-        "                                                </div>\n" +
-        "                                            </div>\n" +
+        "                <ul class=\"app-feature-gallery app-feature-gallery-noshadow margin-bottom-0\"\n" +
+        "                    style=\"height: 20px;\">\n" +
+        "                    <li>\n" +
+        "                        <!-- START WIDGET -->\n" +
+        "                        <div class=\"app-widget-tile app-widget-highlight\">\n" +
+        "                            <div class=\"row\">\n" +
+        "                                <div class=\"col-sm-4\">\n" +
+        "                                    <div class=\"icon icon-lg\">\n" +
+        "                                        <span class=\"icon-undo text-danger\"></span>\n" +
+        "                                    </div>\n" +
+        "                                </div>\n" +
+        "                                <div class=\"col-sm-8\">\n" +
+        "                                    <div class=\"line\">\n" +
+        "                                        <div class=\"title\">Keluhan dibuka kembali</div>\n" +
+        "                                    </div>\n" +
+        "                                    <div class=\"intval text-left\">3</div>\n" +
+        "                                    <div class=\"line\">\n" +
+        "                                        <div class=\"subtitle\"><a href=\"keluhan-list.html\">lihat keluhan</a>\n" +
         "                                        </div>\n" +
         "                                    </div>\n" +
         "                                </div>\n" +
-        "                                <!-- END WIDGET -->\n" +
-        "                            </li>\n" +
-        "                        </ul>\n" +
+        "                            </div>\n" +
+        "                        </div>\n" +
+        "                        <!-- END WIDGET -->\n" +
+        "                    </li>\n" +
+        "                </ul>\n" +
         "\n" +
-        "                    </div>\n" +
+        "            </div>\n" +
         "\n" +
-        "                    <div class=\"col-md-4\">\n" +
-        "\n" +
-        "                        <ul class=\"app-feature-gallery app-feature-gallery-noshadow margin-bottom-0\"\n" +
-        "                            style=\"height: 20px;\">\n" +
-        "                            <li>\n" +
-        "                                <!-- START WIDGET -->\n" +
-        "                                <div class=\"app-widget-tile app-widget-highlight\">\n" +
-        "                                    <div class=\"row\">\n" +
-        "                                        <div class=\"col-sm-4\">\n" +
-        "                                            <div class=\"icon icon-lg\">\n" +
-        "                                                <span class=\"icon-undo text-danger\"></span>\n" +
-        "                                            </div>\n" +
-        "                                        </div>\n" +
-        "                                        <div class=\"col-sm-8\">\n" +
-        "                                            <div class=\"line\">\n" +
-        "                                                <div class=\"title\">Keluhan dibuka kembali</div>\n" +
-        "                                            </div>\n" +
-        "                                            <div class=\"intval text-left\">3</div>\n" +
-        "                                            <div class=\"line\">\n" +
-        "                                                <div class=\"subtitle\"><a href=\"keluhan-list.html\">lihat keluhan</a>\n" +
-        "                                                </div>\n" +
-        "                                            </div>\n" +
-        "                                        </div>\n" +
-        "                                    </div>\n" +
-        "                                </div>\n" +
-        "                                <!-- END WIDGET -->\n" +
-        "                            </li>\n" +
-        "                        </ul>\n" +
-        "\n" +
-        "                    </div>\n" +
-        "\n" +
-        "                </div>\n" +
-        "                <div class=\"row\">\n" +
-        "                    <div class=\"col-md-6\">\n" +
-        "\n" +
-        "                        <ul class=\"app-feature-gallery app-feature-gallery-noshadow margin-bottom-0\"\n" +
-        "                            style=\"height: 20px;\">\n" +
-        "                            <li>\n" +
-        "                                <!-- START WIDGET -->\n" +
-        "                                <div class=\"app-widget-tile app-widget-highlight\">\n" +
-        "                                    <div class=\"row\">\n" +
-        "\n" +
-        "                                        <div class=\"col-sm-8\">\n" +
-        "                                            <div class=\"line\">\n" +
-        "                                                <div class=\"title\">Keluhan terbaru</div>\n" +
-        "                                            </div>\n" +
-        "\n" +
-        "                                            <div class=\"line\">\n" +
-        "                                                <div class=\"title-big\">Joshua Prima</div>\n" +
-        "                                            </div>\n" +
-        "\n" +
-        "                                            <p class=\"margin-top-5\"><span class=\"label label-danger\">Belum ditangani</span>&nbsp;<span class=\"label label-primary\">Sarana dan Prasarana</span></p>\n" +
-        "\n" +
-        "                                            <span><i class=\"fa fa-map-marker\"></i> AA-301</span>\n" +
-        "\n" +
-        "                                            <div class=\"line margin-top-5\">\n" +
-        "                                                <div class=\"title\">Judul Keluhan : Kaca pecah</div>\n" +
-        "                                            </div>\n" +
-        "\n" +
-        "                                            <div class=\"line\">\n" +
-        "                                                <div class=\"subtitle\">\n" +
-        "                                                    <a href=\"keluhan-detail.html\">Lihat keluhan</a>\n" +
-        "                                                </div>\n" +
-        "                                            </div>\n" +
-        "                                        </div>\n" +
-        "                                    </div>\n" +
-        "                                </div>\n" +
-        "                                <!-- END WIDGET -->\n" +
-        "                            </li>\n" +
-        "                        </ul>\n" +
-        "\n" +
-        "                    </div>\n" +
-        "                </div>\n" +
-        "            </div>")
+        "        </div>\n" +
+        "        \n" +
+        "    </div>")
 }
