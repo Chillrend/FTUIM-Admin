@@ -5,7 +5,7 @@ var laporan_list = [
         pelapor: "Johan O'Brian",
         pp_url: "https://i.pravatar.cc/128",
         kategori_laporan: "FACILITIES_AND_INFRASTRUCTURE",
-        subjek: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        judul: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         status: "AWAITING_FOLLOWUP",
         tanggal_lapor: "Jumat, 20-Agustus-2019",
         day_since_last_update: 3
@@ -14,7 +14,7 @@ var laporan_list = [
         pelapor: "Eva Braun",
         pp_url: "https://i.pravatar.cc/128",
         kategori_laporan: "BUILDINGS",
-        subjek: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        judul: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         status: "AWAITING_FOLLOWUP",
         tanggal_lapor: "Senin, 1-Agustus-2019",
         day_since_last_update: 2
@@ -23,7 +23,7 @@ var laporan_list = [
         pelapor: "Heinrich Himmler",
         pp_url: "https://i.pravatar.cc/128",
         kategori_laporan: "FACILITIES_AND_INFRASTRUCTURE",
-        subjek: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+        judul: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         status: "AWAITING_FOLLOWUP",
         tanggal_lapor: "Rabu, 12-Agustus-2019",
         day_since_last_update: 7
@@ -31,32 +31,54 @@ var laporan_list = [
     ];
 
 $(document).ready(function () {
-    laporan_list.forEach(obj => {
-        let kategori_class = util.getTypeClassandHumanReadableString(obj.kategori_laporan);
-        let status_class = util.getStatusClass(obj.status);
-        var template = document.querySelector("#keluhan-row");
-        var tbody = document.querySelector("#table-blyat");
+    // laporan_list.forEach(obj => {
+    //     let kategori_class = util.getTypeClassandHumanReadableString(obj.kategori_laporan);
+    //     let status_class = util.getStatusClass(obj.status);
+    //     var template = document.querySelector("#keluhan-row");
+    //     var tbody = document.querySelector("#table-blyat");
+    //
+    //     let clone = document.importNode(template.content, true);
+    //     let td = clone.querySelectorAll("td");
+    //
+    //     td[0].insertAdjacentHTML("beforeend", "<div class=\"app-checkbox\">\n" +
+    //         "                <label><input type=\"checkbox\"> &nbsp; <span></span></label>\n" +
+    //         "            </div>");
+    //     td[1].textContent = obj.pelapor;
+    //     td[2].insertAdjacentHTML("beforeend", "<a href=\"keluhan-detail.html\" class=\"text-bold text-primary\">" + obj.subjek + "</a>");
+    //     td[3].insertAdjacentHTML("beforeend", "<span class=\"label label-default\">" + kategori_class[1] + "</span>");
+    //     td[4].insertAdjacentHTML("beforeend", "<span class=\"label " + status_class[1]  + "\">" + status_class[0] + "</span>");
+    //     td[5].textContent = obj.tanggal_lapor;
+    //     td[6].insertAdjacentHTML("beforeend", "<div class=\"btn-group btn-group-vertical btn-group-xs\" role=\"group\">\n" +
+    //         "                <button type=\"button\" class=\"btn btn-default\">Edit</button>\n" +
+    //         "                <button type=\"button\" class=\"btn btn-danger\">Hapus</button>\n" +
+    //         "                <button type=\"button\" class=\"btn btn-info\">Naikkan</button>\n" +
+    //         "            </div>");
+    //
+    //     tbody.appendChild(clone);
+    // })
 
-        let clone = document.importNode(template.content, true);
-        let td = clone.querySelectorAll("td");
+    for (let i = 0; i < laporan_list.length ; i++) {
+        laporan_list[i].kategori_laporan = util.getTypeClassandHumanReadableString(laporan_list[i].kategori_laporan)[1];
+        laporan_list[i].status = util.getStatusClass(laporan_list[i].status)[0];
+    }
 
-        td[0].insertAdjacentHTML("beforeend", "<div class=\"app-checkbox\">\n" +
-            "                <label><input type=\"checkbox\"> &nbsp; <span></span></label>\n" +
-            "            </div>");
-        td[1].textContent = obj.pelapor;
-        td[2].insertAdjacentHTML("beforeend", "<a href=\"keluhan-detail.html\" class=\"text-bold text-primary\">" + obj.subjek + "</a>");
-        td[3].insertAdjacentHTML("beforeend", "<span class=\"label label-default\">" + kategori_class[1] + "</span>");
-        td[4].insertAdjacentHTML("beforeend", "<span class=\"label " + status_class[1]  + "\">" + status_class[0] + "</span>");
-        td[5].textContent = obj.tanggal_lapor;
-        td[6].insertAdjacentHTML("beforeend", "<div class=\"btn-group btn-group-vertical btn-group-xs\" role=\"group\">\n" +
-            "                <button type=\"button\" class=\"btn btn-default\">Edit</button>\n" +
-            "                <button type=\"button\" class=\"btn btn-danger\">Hapus</button>\n" +
-            "                <button type=\"button\" class=\"btn btn-info\">Naikkan</button>\n" +
-            "            </div>");
-
-        tbody.appendChild(clone);
+    $('#tabul').DataTable({
+        data: laporan_list,
+        columns: [
+            {"data": "pelapor", "title": "Pelapor", "width": "15%"},
+            {"data": "judul", "title": "Judul", "width": "20%"},
+            {"data": "kategori_laporan", "title": "Kategori", "width": "15%"},
+            {"data": "status", "title": "Status", "width": "15%"},
+            {"data": "tanggal_lapor", "title": "Tanggal Lapor", "width": "20%"},
+            {
+                mRender: function (data, type, row) {
+                    return '<p class="button-inline"><button class="btn btn-sm btn-info btn-icon" data-id=edit"' + row[0] + '"><span class="icon-pencil"></span></button><button class="btn btn-sm btn-danger btn-icon" data-id="delete-' + row[0] + '"><span class="icon-trash"></span></button><button class="btn btn-sm btn-default btn-icon" data-id="process-' + row[0] + '"><span class="icon-arrow-up"></span></button></p>'
+                }, "title": "Actions", "width": "15%"
+            }
+        ]
     })
 });
+
 
 var util = {
     getStatusClass : function (type) {

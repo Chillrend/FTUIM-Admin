@@ -20,6 +20,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="../resources/css/styles.css">
     <link rel="stylesheet" href="../resources/css/font-import.css">
+    <link rel="stylesheet" href="../resources/css/override.css">
     <!-- EOF CSS INCLUDE -->
 </head>
 <body>
@@ -69,9 +70,6 @@
                             <div class="block block-condensed padding-top-20">
 
                                 <div class="block-content margin-bottom-20 padding-left-15">
-                                    <div class="btn-group margin-right-10">
-                                        <button class="btn btn-danger"><span class="icon-trash"></span> Hapus</button>
-                                    </div>
 
                                     <div class="pull-right">
                                         <select class="bs-select" data-style="btn-default">
@@ -86,50 +84,13 @@
 
                                 </div>
                                 <div class="block-divider margin-0"></div>
-                                <div class="table-responsive">
-                                    <table class="table table-head-light table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>
-                                                    <div class="app-checkbox"><label><input type="checkbox" class="checkall">&nbsp;</label></div>
-                                                </th>
-                                                <th width="10%">Pelapor</th>
-                                                <th width="20%">Judul Laporan</th>
-                                                <th width="20%">Kategori Laporan</th>
-                                                <th width="20%">Status Laporan</th>
-                                                <th width="20%">Tanggal melapor</th>
-                                                <th width="20%">Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="table-blyat">
+                                <div class="table-responsive" style="padding: 10px">
+                                    <table id="tabul" class="table table-bordered table-striped">
 
-                                        <!--Appended by JS-->
-                                        </tbody>
                                     </table>
                                 </div>
                             </div>
 
-                            <nav>
-                                <ul class="pagination pagination-rounded pull-right">
-                                    <li class="disabled">
-                                        <a href="#" aria-label="Previous">
-                                            <span aria-hidden="true">«</span>
-                                        </a>
-                                    </li>
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
-                                    <li>
-                                        <a href="#" aria-label="Next">
-                                            <span aria-hidden="true">»</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-
-                        <!-- CONTENT CONTAINER -->
                     </div>
 
 
@@ -143,6 +104,7 @@
     <!-- END APP CONTAINER -->
 
 </div>
+
 <!-- END APP WRAPPER -->
 <template id="keluhan-row">
     <tr>
@@ -169,6 +131,27 @@
         </td>
 
     </tr>
+</template>
+<template>
+    <table class="table table-head-light table-striped" id="awe">
+        <thead>
+        <tr>
+            <th>
+                <div class="app-checkbox"><label><input type="checkbox" class="checkall">&nbsp;</label></div>
+            </th>
+            <th width="10%">Pelapor</th>
+            <th width="20%">Judul Laporan</th>
+            <th width="20%">Kategori Laporan</th>
+            <th width="20%">Status Laporan</th>
+            <th width="20%">Tanggal melapor</th>
+            <th width="20%">Action</th>
+        </tr>
+        </thead>
+        <tbody id="table-blyat">
+
+        <!--Appended by JS-->
+        </tbody>
+    </table>
 </template>
 <!-- START SCRIPTS -->
 <script type="text/javascript" src="../resources/js/vendor/jquery/jquery.min.js"></script>

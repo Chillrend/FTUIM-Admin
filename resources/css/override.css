@@ -14,10 +14,11 @@
     font-size: 10px !important;
 }
 
-.button-inline{
-    display: inline;
-}
-
 .title-big{
     font-size: 14pt;
+}
+
+.button-inline .btn{
+    vertical-align: top;
+    display: inline-block;
 }
