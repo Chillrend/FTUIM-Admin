@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Keluhan FTUI</title>
+
+    <!-- META SECTION -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="manifest" href="../site.webmanifest">
+    <link rel="mask-icon" href="../safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <!-- END META SECTION -->
+    <!-- CSS INCLUDE -->
+    <link rel="stylesheet" href="../resources/css/styles.css">
+    <link rel="stylesheet" href="../resources/css/font-import.css">
+    <link rel="stylesheet" href="../resources/css/override.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropper/4.0.0/cropper.min.css" integrity="sha256-/KLAk4A9xEOKGyr4umt11boYQJtP40gBLT+WrfWImuY=" crossorigin="anonymous" />
+    <!-- EOF CSS INCLUDE -->
+</head>
+<body>
+
+<!-- APP WRAPPER -->
+<div class="app">
+
+    <!-- START APP CONTAINER -->
+    <div class="app-container">
+        <!-- START SIDEBAR -->
+        <!--This is a hack script to cover shitty HTML specification that doesn't have include function, please change with php include instead-->
+        <iframe src="includes/manager_sidebar.html"
+                onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+        <!-- END SIDEBAR -->
+
+        <!-- START APP CONTENT -->
+        <div class="app-content app-sidebar-left">
+            <!-- START APP HEADER -->
+            <!--This is a hack script to cover shitty HTML specification that doesn't have include function, please change with php include instead-->
+            <iframe src="includes/header.html"
+                    onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+            <!-- END APP HEADER  -->
+
+            <!-- START PAGE HEADING -->
+            <div id="ignore-heading-1" class="app-heading app-heading-bordered app-heading-page">
+                <div class="icon icon-lg">
+                    <span class="icon-laptop"></span>
+                </div>
+                <div class="title">
+                    <h1>Manager</h1>
+                    <p>Management Laporan Keluhan</p>
+                </div>
+            </div>
+            <div id="ignore-heading-2" class="app-heading-container app-heading-bordered bottom">
+                <ul class="breadcrumb">
+                    <li><a href="#">Pengaturan</a></li>
+                    <li class="active">Ganti Password</li>
+                </ul>
+            </div>
+            <!-- END PAGE HEADING -->
+            <!-- START PAGE CONTAINER -->
+            <div class="container" id="pnewrint">
+                <!--START REKAPITULASI MINGGUAN-->
+
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <!-- START PRODUCT SALES HISTORY -->
+                        <div class="block block-condensed">
+                            <div class="app-heading">
+                                <div class="title">
+                                    <h2>Ganti password</h2>
+                                    <p>Ganti informasi kredensial untuk login</p>
+                                </div>
+                            </div>
+                                <div class="block-content" style="width: 700px">
+                                    <form runat="server">
+                                        <div class="form-group" id="name">
+                                            <label for="name_input" class="control-label">Nama</label>
+                                            <input type="text" class="form-control" id="name_input">
+                                        </div>
+                                        <div class="form-group" id="email">
+                                            <label for="email_input" class="control-label">Password baru</label>
+                                            <input type="text" class="form-control" id="email_input">
+                                        </div>
+                                        <div class="form-group" id="img_pp">
+                                            <label for="img_pp_input" class="control-label">Gambar profil</label>
+<!--                                            change to user pp url-->
+                                            <img id="preview" class="img-circle img-block" id="pp_image" width="100px" height="100px" src="../resources/img/icons/user_placeholder.png" alt="">
+                                            <input type="file" accept="image/*" class="form-control" id="img_pp_input">
+                                        </div>
+
+                                        <div class="form-group" id="submit-btn">
+                                            <input type="submit" class="btn btn-info" id="submit_btn_btn">
+                                        </div>
+                                    </form>
+                                </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- END PAGE CONTAINER -->
+
+
+        </div>
+        <!-- END APP CONTENT -->
+
+    </div>
+    <!-- END APP CONTAINER -->
+
+</div>
+<!-- END APP WRAPPER -->
+
+<!-- START SCRIPTS -->
+<script type="text/javascript" src="../resources/js/vendor/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/moment/moment.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/customscrollbar/jquery.mCustomScrollbar.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/bootstrap-select/bootstrap-select.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/select2/select2.full.min.js"></script>
+<script type="text/javascript"
+        src="../resources/js/vendor/bootstrap-datetimepicker/bootstrap-datetimepicker.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/maskedinput/jquery.maskedinput.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/form-validator/jquery.form-validator.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/noty/jquery.noty.packaged.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/datatables/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/datatables/dataTables.bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/sweetalert/sweetalert.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/knob/jquery.knob.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/jvectormap/jquery-jvectormap.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/jvectormap/jquery-jvectormap-us-aea-en.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/sparkline/jquery.sparkline.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/morris/raphael.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/morris/morris.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/rickshaw/d3.v3.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/rickshaw/rickshaw.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/isotope/isotope.pkgd.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/dropzone/dropzone.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/nestable/jquery.nestable.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/cropper/cropper.min.js"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/tableexport/tableExport.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/tableexport/jquery.base64.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js" integrity="sha256-xKeoJ50pzbUGkpQxDYHD7o7hxe0LaOGeguUidbq6vis=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="../resources/js/vendor/bootstrap-daterange/daterangepicker.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/bootstrap-tour/bootstrap-tour.min.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/fullcalendar/fullcalendar.js"></script>
+<script type="text/javascript" src="../resources/js/vendor/smartwizard/jquery.smartWizard.js"></script>
+
+<script type="text/javascript" src="../resources/js/app.js"></script>
+<script type="text/javascript" src="../resources/js/app_plugins.js"></script>
+<script type="text/javascript" src="../resources/js/app_demo.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropper/4.0.0/cropper.min.js" integrity="sha256-QT8oUxSZbywEwAPBgej6iNFH1ephgQV3q2pzjIso5pk=" crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="../resources/js/image_cropper.js"></script>
+<!-- END SCRIPTS -->
+</body>
+</html>
