@@ -32,7 +32,7 @@
     <div class="app-container">
         <!-- START SIDEBAR -->
         <!--This is a hack script to cover shitty HTML specification that doesn't have include function, please change with php include instead-->
-        <iframe src="includes/manager_sidebar.html"
+        <iframe src="includes/sidebar.html"
                 onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
         <!-- END SIDEBAR -->
 
@@ -57,7 +57,7 @@
             <div id="ignore-heading-2" class="app-heading-container app-heading-bordered bottom">
                 <ul class="breadcrumb">
                     <li><a href="#">Pengaturan</a></li>
-                    <li class="active">Ganti Password</li>
+                    <li class="active">Ganti Profil</li>
                 </ul>
             </div>
             <!-- END PAGE HEADING -->
@@ -72,8 +72,8 @@
                         <div class="block block-condensed">
                             <div class="app-heading">
                                 <div class="title">
-                                    <h2>Ganti password</h2>
-                                    <p>Ganti informasi kredensial untuk login</p>
+                                    <h2>Ganti informasi profil</h2>
+                                    <p>Ganti username, email, dan gambar profil</p>
                                 </div>
                             </div>
                                 <div class="block-content" style="width: 700px">
@@ -83,7 +83,7 @@
                                             <input type="text" class="form-control" id="name_input">
                                         </div>
                                         <div class="form-group" id="email">
-                                            <label for="email_input" class="control-label">Password baru</label>
+                                            <label for="email_input" class="control-label">Email</label>
                                             <input type="text" class="form-control" id="email_input">
                                         </div>
                                         <div class="form-group" id="img_pp">

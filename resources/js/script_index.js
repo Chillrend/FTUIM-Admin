@@ -63,7 +63,7 @@ var user = {
             }
         }
     ]
-}
+};
 
 $(document).ready(function () {
     let surveyor_specialties = "";

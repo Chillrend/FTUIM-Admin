@@ -21,15 +21,6 @@ $(document).ready(function () {
 
     });
 
-    var data = [{day: "Senin", value: 1},
-        {day: "Selasa", value: 3},
-        {day: "Rabu", value: 5},
-        {day: "Kamis", value: 1},
-        {day: "Jumat", value: 1},
-        {day: "Sabtu", value: 3},
-        {day: "Minggu", value: 1}];
-
-
     //Mocking API Call with static JS Object
     var datum = [{'timestamp' : '2019-01', a : 122, b: 123, c: 166, d: 100, e: 189, f: 120},
         {'timestamp' : '2019-02', a : 100, b: 184, c: 112, d: 119, e: 87, f: 80},

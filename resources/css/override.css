@@ -26,3 +26,7 @@
 .img-block{
     display: block;
 }
+
+svg rect{
+    min-width: 50px;
+}
