@@ -191,6 +191,12 @@ var all_cat_status = {
         'FINISHED' :  10,
         'REOPENED' :  0
     },
+    'TOTAL' :{
+        'AWAITING_FOLLOWUP': 34,
+        'IS_BEING_FOLLOWEDUP': 10,
+        'FINISHED' :  250,
+        'REOPENED' :  8
+    }
 };
 
 // '<div class="container app-content-tab '+ isActive +'" id="'+ id +'">\n' +
@@ -224,6 +230,76 @@ function appendHtml(elem, id, isActive) {
         '                </div>\n' +
         '                <!-- END BLOCK -->\n' +
         '\n' +
+        '<div class="row">\n' +
+        '        <div class="col-md-12">\n' +
+        '            <!-- START ALLTIME CATEGORY -->\n' +
+        '            <div class="block block-condensed">\n' +
+        '                <div class="app-heading">\n' +
+        '                    <div class="title">\n' +
+        '                        <h2>Total laporan per bulan</h2>\n' +
+        '                        <p>Tabel laporan masuk per bulan kategori '+ util.getUserReadableTypeString(id) +'</p>\n' +
+        '                    </div>\n' +
+        '                </div>\n' +
+        '                <div class="block-content">\n' +
+        '                    <table class="table table-striped table-bordered">\n' +
+        '                        <thead>\n' +
+        '                        <tr>\n' +
+        '                            <th>Bulan</th>\n' +
+        '                            <th>Jumlah Laporan</th>\n' +
+        '                        </tr>\n' +
+        '                        </thead>\n' +
+        '                        <tbody>\n' +
+        '                        <tr>\n' +
+        '                            <td><a href="../keluhan-list.html">Januari</a></td>\n' +
+        '                            <td>32</td>\n' +
+        '                        </tr>\n' +
+        '                        <tr>\n' +
+        '                            <td><a href="../keluhan-list.html">Februari</a></td>\n' +
+        '                            <td>32</td>\n' +
+        '                        </tr>\n' +
+        '                        <tr>\n' +
+        '                            <td><a href="../keluhan-list.html">Maret</a></td>\n' +
+        '                            <td>32</td>\n' +
+        '                        </tr>\n' +
+        '                        <tr>\n' +
+        '                            <td><a href="../keluhan-list.html">April</a></td>\n' +
+        '                            <td>32</td>\n' +
+        '                        </tr>\n' +
+        '                        <tr>\n' +
+        '                            <td><a href="../keluhan-list.html">Mei</a></td>\n' +
+        '                            <td>32</td>\n' +
+        '                        </tr>\n' +
+        '                        <tr>\n' +
+        '                            <td><a href="../keluhan-list.html">Juni</a></td>\n' +
+        '                            <td>32</td>\n' +
+        '                        </tr>\n' +
+        '                        <tr>\n' +
+        '                            <td><a href="../keluhan-list.html">Juli</a></td>\n' +
+        '                            <td>32</td>\n' +
+        '                        </tr>\n' +
+        '                        <tr>\n' +
+        '                            <td><a href="../keluhan-list.html">Agustus</a></td>\n' +
+        '                            <td>32</td>\n' +
+        '                        </tr>\n' +
+        '                        <tr>\n' +
+        '                            <td><a href="../keluhan-list.html">September</a></td>\n' +
+        '                            <td>32</td>\n' +
+        '                        </tr>\n' +
+        '                        <tr>\n' +
+        '                            <td><a href="../keluhan-list.html">November</a></td>\n' +
+        '                            <td>32</td>\n' +
+        '                        </tr>\n' +
+        '                        <tr>\n' +
+        '                            <td><a href="../keluhan-list.html">Desember</a></td>\n' +
+        '                            <td>32</td>\n' +
+        '                        </tr>\n' +
+        '                        </tbody>\n' +
+        '                    </table>\n' +
+        '                </div>\n' +
+        '            </div>\n' +
+        '        </div>\n' +
+        '    </div>'
+        +
         '            </div>');
 
     let bulanan_chart_elem = document.getElementById('bulanan-chart-bar-' + id);
@@ -269,6 +345,8 @@ function appendHtml(elem, id, isActive) {
             }
         }
     });
+
+
 }
 
 function switchForChartVariable(category){

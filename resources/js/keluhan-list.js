@@ -8,7 +8,7 @@ var laporan_list = [
         judul: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         status: "AWAITING_FOLLOWUP",
         tanggal_lapor: "Jumat, 20-Agustus-2019",
-        day_since_last_update: 3
+        day_since_submited_or_completed: 5
     },
     {
         pelapor: "Eva Braun",
@@ -17,7 +17,7 @@ var laporan_list = [
         judul: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         status: "AWAITING_FOLLOWUP",
         tanggal_lapor: "Senin, 1-Agustus-2019",
-        day_since_last_update: 2
+        day_since_submited_or_completed: 7
     },
     {
         pelapor: "Heinrich Himmler",
@@ -26,7 +26,7 @@ var laporan_list = [
         judul: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
         status: "AWAITING_FOLLOWUP",
         tanggal_lapor: "Rabu, 12-Agustus-2019",
-        day_since_last_update: 7
+        day_since_submited_or_completed: 10
     }
     ];
 
@@ -65,14 +65,15 @@ $(document).ready(function () {
     $('#tabul').DataTable({
         data: laporan_list,
         columns: [
-            {"data": "pelapor", "title": "Pelapor", "width": "15%"},
+            {"data": "pelapor", "title": "Pelapor", "width": "10%"},
             {"data": "judul", "title": "Judul", "width": "20%"},
-            {"data": "kategori_laporan", "title": "Kategori", "width": "15%"},
+            {"data": "kategori_laporan", "title": "Kategori", "width": "10%"},
             {"data": "status", "title": "Status", "width": "15%"},
             {"data": "tanggal_lapor", "title": "Tanggal Lapor", "width": "20%"},
+            {"data": "day_since_submited_or_completed", "title": "Hari setelah tanggal lapor", "width": "10%"},
             {
                 mRender: function (data, type, row) {
-                    return '<p class="button-inline"><button class="btn btn-sm btn-info btn-icon" data-id=edit"' + row[0] + '"><span class="icon-pencil"></span></button><button class="btn btn-sm btn-danger btn-icon" data-id="delete-' + row[0] + '"><span class="icon-trash"></span></button><button class="btn btn-sm btn-default btn-icon" data-id="process-' + row[0] + '"><span class="icon-arrow-up"></span></button></p>'
+                    return '<p class="button-inline"><button class="btn btn-sm btn-info btn-icon" data-id=edit"' + row[0] + '"><span class="icon-pencil"></span></button><button class="btn btn-sm btn-danger btn-icon" data-id="delete-' + row[0] + '"><span class="icon-trash"></span></button><a href="keluhan-detail.html" class="btn btn-sm btn-default btn-icon" data-id="process-' + row[0] + '"><span class="icon-exit-up"></span></a></p>'
                 }, "title": "Actions", "width": "15%"
             }
         ]

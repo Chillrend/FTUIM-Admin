@@ -14,6 +14,45 @@ $(document).ready(function () {
         },
     };
 
+    var all_cat_status = {
+        'FACILITIES_AND_INFRASTRUCTURE' : {
+            'AWAITING_FOLLOWUP': 10,
+            'IS_BEING_FOLLOWEDUP': 5,
+            'FINISHED' :  10,
+            'REOPENED' :  1
+        },
+        'BUILDINGS' :{
+            'AWAITING_FOLLOWUP': 15,
+            'IS_BEING_FOLLOWEDUP': 2,
+            'FINISHED' :  2,
+            'REOPENED' :  1
+        },
+        'HUMAN_RESOURCE': {
+            'AWAITING_FOLLOWUP': 5,
+            'IS_BEING_FOLLOWEDUP': 1,
+            'FINISHED' :  2,
+            'REOPENED' :  0
+        },
+        'CLEANING_AND_GARDENING': {
+            'AWAITING_FOLLOWUP': 25,
+            'IS_BEING_FOLLOWEDUP': 3,
+            'FINISHED' :  18,
+            'REOPENED' :  0
+        },
+        'INCIDENT_AND_RULE_VIOLATION': {
+            'AWAITING_FOLLOWUP': 16,
+            'IS_BEING_FOLLOWEDUP': 8,
+            'FINISHED' :  10,
+            'REOPENED' :  0
+        },
+        'TOTAL' :{
+            'AWAITING_FOLLOWUP': 34,
+            'IS_BEING_FOLLOWEDUP': 10,
+            'FINISHED' :  250,
+            'REOPENED' :  8
+        }
+    };
+
     $('#btn-go-export').on('click', function () {
         html2canvas(document.querySelector('#mingguan-chart-bar'), {useCORS: true}).then(canvas => {
             $('#test').append(canvas)
@@ -31,7 +70,7 @@ $(document).ready(function () {
         {'timestamp' : '2019-07', a : 12, b: 33, c: 65, d: 56, e: 72, f: 10}];
 
     var chart = new Morris.Line({
-        element: "mingguan-chart-bar",
+        element: 'mingguan-chart-bar',
         data: datum,
         xkey: 'timestamp',
         ykeys: ['a', 'b', 'c', 'd', 'e', 'f'],
@@ -52,6 +91,24 @@ $(document).ready(function () {
         perbulan_kebersihan.push({'timestamp' : data.timestamp, 'amount': data.d});
         perbulan_insiden_tata_tertib.push({'timestamp' : data.timestamp, 'amount': data.e});
         perbulan_lainnya.push({'timestamp' : data.timestamp, 'amount': data.f});
+    });
+
+    let alltime_chart = new Chart(document.getElementById('per-status-chart'), {
+        type: 'pie',
+        data: {
+            datasets: [{
+                data: [all_cat_status.TOTAL.AWAITING_FOLLOWUP, all_cat_status.TOTAL.IS_BEING_FOLLOWEDUP, all_cat_status.TOTAL.FINISHED, all_cat_status.TOTAL.REOPENED],
+                backgroundColor: ['#E52250', '#515FDB', '#22E59C', getRandomColor()]
+            }],
+            labels: ["Menunggu Tindaklanjut", "Sedang ditindaklanjuti", "Selesai", "Dibuka kembali"]
+        },
+        options: {
+            legend: { display: true },
+            title: {
+                display: true,
+                text: 'Jumlah total laporan berdasarkan status laporan'
+            }
+        }
     });
 
     var sarpras_chart = new Morris.Bar({
